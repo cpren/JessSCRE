@@ -30,7 +30,7 @@
               </block>
             </value>
             <next>
-              <block type="oled_color" id="119">
+              <block type="oled_color" id="161">
                 <field name="OBJECT">GREEN</field>
                 <next>
                   <block type="oled_drawtext" id="51">
