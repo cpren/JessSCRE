@@ -1,30 +1,30 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="1" inline="false" x="-11" y="-291">
-    <field name="MODE">WHILE</field>
-    <value name="NUMBER">
-      <block type="logic_compare" id="2" inline="true">
-        <field name="OP">EQ</field>
-        <value name="A">
-          <block type="math_number" id="3">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="B">
-          <block type="math_number" id="4">
-            <field name="NUM">1</field>
-          </block>
-        </value>
+  <block type="variables_set" id="5" inline="true" x="-6" y="-334">
+    <field name="VAR">ypos</field>
+    <value name="VALUE">
+      <block type="math_number" id="6">
+        <field name="NUM">10</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="variables_set" id="5" inline="true">
-        <field name="VAR">ypos</field>
-        <value name="VALUE">
-          <block type="math_number" id="6">
-            <field name="NUM">10</field>
+    <next>
+      <block type="controls_whileUntil" id="1" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="2" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="math_number" id="3">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="4">
+                <field name="NUM">1</field>
+              </block>
+            </value>
           </block>
         </value>
-        <next>
+        <statement name="DO">
           <block type="oled_setcursor" id="47" inline="true">
             <value name="STARTX">
               <block type="math_number" id="58">
@@ -69,24 +69,6 @@
                                     </value>
                                   </block>
                                 </value>
-                                <next>
-                                  <block type="oled_cleardisplay" id="15">
-                                    <next>
-                                      <block type="oled_setcursor" id="16" inline="true">
-                                        <value name="STARTX">
-                                          <block type="math_number" id="17">
-                                            <field name="NUM">30</field>
-                                          </block>
-                                        </value>
-                                        <value name="STARTY">
-                                          <block type="variables_get" id="18">
-                                            <field name="VAR">ypos</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
                               </block>
                             </statement>
                           </block>
@@ -98,8 +80,8 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
