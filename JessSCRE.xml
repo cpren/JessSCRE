@@ -71,6 +71,35 @@
                                 </value>
                               </block>
                             </statement>
+                            <next>
+                              <block type="controls_if" id="65" inline="false">
+                                <value name="IF0">
+                                  <block type="sensor_button" id="72">
+                                    <field name="OBJECT">UP</field>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="variables_set" id="73" inline="true">
+                                    <field name="VAR">ypos</field>
+                                    <value name="VALUE">
+                                      <block type="math_arithmetic" id="74" inline="true">
+                                        <field name="OP">MINUS</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="75">
+                                            <field name="VAR">ypos</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="76">
+                                            <field name="NUM">10</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
