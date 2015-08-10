@@ -1,69 +1,88 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="5" inline="true" x="-6" y="-334">
-    <field name="VAR">ypos</field>
-    <value name="VALUE">
-      <block type="math_number" id="6">
-        <field name="NUM">10</field>
-      </block>
-    </value>
-    <next>
-      <block type="controls_whileUntil" id="1" inline="false">
-        <field name="MODE">WHILE</field>
-        <value name="NUMBER">
-          <block type="logic_compare" id="2" inline="true">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="math_number" id="3">
-                <field name="NUM">1</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="4">
-                <field name="NUM">1</field>
-              </block>
-            </value>
+  <block type="controls_whileUntil" id="1" inline="false" x="-14" y="-736">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="logic_compare" id="2" inline="true">
+        <field name="OP">EQ</field>
+        <value name="A">
+          <block type="math_number" id="3">
+            <field name="NUM">1</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="oled_setcursor" id="47" inline="true">
-            <value name="STARTX">
-              <block type="math_number" id="58">
-                <field name="NUM">30</field>
-              </block>
-            </value>
-            <value name="STARTY">
-              <block type="variables_get" id="51">
-                <field name="VAR">ypos</field>
-              </block>
-            </value>
+        <value name="B">
+          <block type="math_number" id="4">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_setcursor" id="47" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="58">
+            <field name="NUM">30</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="variables_get" id="51">
+            <field name="VAR">ypos</field>
+          </block>
+        </value>
+        <next>
+          <block type="oled_cleardisplay" id="27">
             <next>
-              <block type="oled_cleardisplay" id="27">
+              <block type="oled_color" id="7">
+                <field name="OBJECT">GREEN</field>
                 <next>
-                  <block type="oled_color" id="7">
-                    <field name="OBJECT">GREEN</field>
+                  <block type="oled_drawtext" id="8">
+                    <field name="TEXT">HELLO</field>
                     <next>
-                      <block type="oled_drawtext" id="8">
-                        <field name="TEXT">HELLO</field>
+                      <block type="controls_if" id="9" inline="false">
+                        <value name="IF0">
+                          <block type="sensor_button" id="10">
+                            <field name="OBJECT">DOWN</field>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="11" inline="true">
+                            <field name="VAR">ypos</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="12" inline="true">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="13">
+                                    <field name="VAR">ypos</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="14">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
                         <next>
-                          <block type="controls_if" id="9" inline="false">
+                          <block type="controls_if" id="65" inline="false">
                             <value name="IF0">
-                              <block type="sensor_button" id="10">
-                                <field name="OBJECT">DOWN</field>
+                              <block type="sensor_button" id="72">
+                                <field name="OBJECT">UP</field>
                               </block>
                             </value>
                             <statement name="DO0">
-                              <block type="variables_set" id="11" inline="true">
+                              <block type="variables_set" id="73" inline="true">
                                 <field name="VAR">ypos</field>
                                 <value name="VALUE">
-                                  <block type="math_arithmetic" id="12" inline="true">
-                                    <field name="OP">ADD</field>
+                                  <block type="math_arithmetic" id="74" inline="true">
+                                    <field name="OP">MINUS</field>
                                     <value name="A">
-                                      <block type="variables_get" id="13">
+                                      <block type="variables_get" id="75">
                                         <field name="VAR">ypos</field>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="math_number" id="14">
+                                      <block type="math_number" id="76">
                                         <field name="NUM">10</field>
                                       </block>
                                     </value>
@@ -71,35 +90,6 @@
                                 </value>
                               </block>
                             </statement>
-                            <next>
-                              <block type="controls_if" id="65" inline="false">
-                                <value name="IF0">
-                                  <block type="sensor_button" id="72">
-                                    <field name="OBJECT">UP</field>
-                                  </block>
-                                </value>
-                                <statement name="DO0">
-                                  <block type="variables_set" id="73" inline="true">
-                                    <field name="VAR">ypos</field>
-                                    <value name="VALUE">
-                                      <block type="math_arithmetic" id="74" inline="true">
-                                        <field name="OP">MINUS</field>
-                                        <value name="A">
-                                          <block type="variables_get" id="75">
-                                            <field name="VAR">ypos</field>
-                                          </block>
-                                        </value>
-                                        <value name="B">
-                                          <block type="math_number" id="76">
-                                            <field name="NUM">10</field>
-                                          </block>
-                                        </value>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </statement>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
@@ -109,8 +99,16 @@
               </block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
-    </next>
+    </statement>
+  </block>
+  <block type="variables_set" id="5" inline="true" x="3" y="-482">
+    <field name="VAR">ypos</field>
+    <value name="VALUE">
+      <block type="math_number" id="6">
+        <field name="NUM">10</field>
+      </block>
+    </value>
   </block>
 </xml>
