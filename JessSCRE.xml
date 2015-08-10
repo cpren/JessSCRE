@@ -20,7 +20,7 @@
       <block type="oled_setcursor" id="47" inline="true">
         <value name="STARTX">
           <block type="math_number" id="58">
-            <field name="NUM">30</field>
+            <field name="NUM">35</field>
           </block>
         </value>
         <value name="STARTY">
@@ -102,13 +102,5 @@
         </next>
       </block>
     </statement>
-  </block>
-  <block type="variables_set" id="5" inline="true" x="3" y="-482">
-    <field name="VAR">ypos</field>
-    <value name="VALUE">
-      <block type="math_number" id="6">
-        <field name="NUM">10</field>
-      </block>
-    </value>
   </block>
 </xml>
