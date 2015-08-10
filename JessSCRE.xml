@@ -1,13 +1,13 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="9" x="-5" y="6">
-    <next>
-      <block type="controls_if" id="65" inline="false">
-        <value name="IF0">
-          <block type="sensor_button" id="58">
-            <field name="OBJECT">UP</field>
-          </block>
-        </value>
-        <statement name="DO0">
+  <block type="controls_if" id="65" inline="false" x="-4" y="74">
+    <value name="IF0">
+      <block type="sensor_button" id="58">
+        <field name="OBJECT">UP</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="oled_cleardisplay" id="9">
+        <next>
           <block type="oled_setcursor" id="18" inline="true">
             <value name="STARTX">
               <block type="math_number" id="26">
@@ -31,12 +31,12 @@
             </value>
             <next>
               <block type="oled_drawtext" id="51">
-                <field name="TEXT">hELLLLLLLLOOO</field>
+                <field name="TEXT">HELLLLLLLLOOO</field>
               </block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
