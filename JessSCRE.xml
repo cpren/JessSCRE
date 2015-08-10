@@ -8,30 +8,30 @@
     <statement name="DO0">
       <block type="oled_cleardisplay" id="9">
         <next>
-          <block type="oled_drawtext" id="51">
-            <field name="TEXT">HELLLLLLLLOOO</field>
+          <block type="oled_setcursor" id="18" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="26">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_arithmetic" id="81" inline="true">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <block type="math_number" id="42">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="83">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+              </block>
+            </value>
             <next>
-              <block type="oled_setcursor" id="18" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="26">
-                    <field name="NUM">50</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_arithmetic" id="81" inline="true">
-                    <field name="OP">ADD</field>
-                    <value name="A">
-                      <block type="math_number" id="42">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="83">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
+              <block type="oled_drawtext" id="51">
+                <field name="TEXT">HELLLLLLLLOOO</field>
               </block>
             </next>
           </block>
