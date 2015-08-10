@@ -30,8 +30,13 @@
               </block>
             </value>
             <next>
-              <block type="oled_drawtext" id="51">
-                <field name="TEXT">HELLO</field>
+              <block type="oled_color" id="119">
+                <field name="OBJECT">GREEN</field>
+                <next>
+                  <block type="oled_drawtext" id="51">
+                    <field name="TEXT">HELLO</field>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
